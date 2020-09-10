@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MyLibrary.Domain.Models.Product> 
+@{    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Product Catalog</h1>
+
+<div class="container body-content">
+    <div class="row product-content">
+
+        @foreach(var product in Model)
+        {
+            <div class="col-4 product-content-container">
+                <table>
+                    <tr> 
+                        <td>Name:</td>
+                        <td>@product.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td>@product.Price</td>
+                    </tr>
+                    <tr>
+                        <td>Stock:</td>
+                        <td>@product.Stock</td>
+                    </tr>
+                </table> 
+            </div>
+        }
+    </div>
+
+</div>
